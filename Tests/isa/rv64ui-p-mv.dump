@@ -143,15 +143,15 @@ Disassembly of section .text:
     80002004:	00008093          	mv	ra,ra
     80002008:	0000b083          	ld	ra,0(ra) # 80003000 <begin_signature>
     8000200c:	00008113          	mv	sp,ra
-    80002010:	0080b703          	ld	a4,8(ra)
-    80002014:	ffadd3b7          	lui	t2,0xffadd
-    80002018:	aff3839b          	addiw	t2,t2,-1281 # ffffffffffadcaff <_end+0xffffffff7fad9acf>
+    80002010:	00813703          	ld	a4,8(sp)
+    80002014:	feadd3b7          	lui	t2,0xfeadd
+    80002018:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
     8000201c:	00c39393          	slli	t2,t2,0xc
     80002020:	deb38393          	addi	t2,t2,-533
     80002024:	00c39393          	slli	t2,t2,0xc
     80002028:	dcb38393          	addi	t2,t2,-565
-    8000202c:	01039393          	slli	t2,t2,0x10
-    80002030:	ede38393          	addi	t2,t2,-290
+    8000202c:	00c39393          	slli	t2,t2,0xc
+    80002030:	fed38393          	addi	t2,t2,-19
     80002034:	00100193          	li	gp,1
     80002038:	04771263          	bne	a4,t2,8000207c <fail>
 
@@ -160,15 +160,15 @@ Disassembly of section .text:
     80002040:	fc408093          	addi	ra,ra,-60 # 80003000 <begin_signature>
     80002044:	0000b083          	ld	ra,0(ra)
     80002048:	00008113          	mv	sp,ra
-    8000204c:	0100b683          	ld	a3,16(ra)
-    80002050:	fdcb03b7          	lui	t2,0xfdcb0
-    80002054:	edf3839b          	addiw	t2,t2,-289 # fffffffffdcafedf <_end+0xffffffff7dcaceaf>
+    8000204c:	00813683          	ld	a3,8(sp)
+    80002050:	feadd3b7          	lui	t2,0xfeadd
+    80002054:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
     80002058:	00c39393          	slli	t2,t2,0xc
-    8000205c:	add38393          	addi	t2,t2,-1315
+    8000205c:	deb38393          	addi	t2,t2,-533
     80002060:	00c39393          	slli	t2,t2,0xc
-    80002064:	aff38393          	addi	t2,t2,-1281
+    80002064:	dcb38393          	addi	t2,t2,-565
     80002068:	00c39393          	slli	t2,t2,0xc
-    8000206c:	dea38393          	addi	t2,t2,-534
+    8000206c:	fed38393          	addi	t2,t2,-19
     80002070:	00200193          	li	gp,2
     80002074:	00769463          	bne	a3,t2,8000207c <fail>
     80002078:	02301063          	bne	zero,gp,80002098 <pass>

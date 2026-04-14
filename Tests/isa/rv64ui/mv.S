@@ -15,18 +15,18 @@ RVTEST_CODE_BEGIN
 
 # Test move chains
 
-    TEST_CASE( 1, x14, 0xadcafedeadcafede, \
+    TEST_CASE( 1, x14, 0xeadcafedeadcafed, \
       la x1, ptr_to_tdat; \
       ld x1, 0(x1); \
       addi x2, x1, 0; \
-      ld x14, 8(x1); \
+      ld x14, 8(x2); \
     )
 
-    TEST_CASE( 2, x13, 0xdcafedeadcafedea, \
+    TEST_CASE( 2, x13, 0xeadcafedeadcafed, \
       la x1, ptr_to_tdat; \
       ld x1, 0(x1); \
       addi x2, x1, 0; \
-      ld x13, 16(x1); \
+      ld x13, 8(x2); \
     )
 
 
