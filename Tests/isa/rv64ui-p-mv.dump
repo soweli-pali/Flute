@@ -161,14 +161,14 @@ Disassembly of section .text:
     80002044:	0000b083          	ld	ra,0(ra)
     80002048:	00008113          	mv	sp,ra
     8000204c:	0100b683          	ld	a3,16(ra)
-    80002050:	fe57f3b7          	lui	t2,0xfe57f
-    80002054:	6f53839b          	addiw	t2,t2,1781 # fffffffffe57f6f5 <_end+0xffffffff7e57c6c5>
+    80002050:	fdcb03b7          	lui	t2,0xfdcb0
+    80002054:	edf3839b          	addiw	t2,t2,-289 # fffffffffdcafedf <_end+0xffffffff7dcaceaf>
     80002058:	00c39393          	slli	t2,t2,0xc
-    8000205c:	6e538393          	addi	t2,t2,1765
+    8000205c:	add38393          	addi	t2,t2,-1315
     80002060:	00c39393          	slli	t2,t2,0xc
-    80002064:	7f738393          	addi	t2,t2,2039
-    80002068:	00d39393          	slli	t2,t2,0xd
-    8000206c:	ead38393          	addi	t2,t2,-339
+    80002064:	aff38393          	addi	t2,t2,-1281
+    80002068:	00c39393          	slli	t2,t2,0xc
+    8000206c:	dea38393          	addi	t2,t2,-534
     80002070:	00200193          	li	gp,2
     80002074:	00769463          	bne	a3,t2,8000207c <fail>
     80002078:	02301063          	bne	zero,gp,80002098 <pass>
@@ -205,23 +205,21 @@ Disassembly of section .data:
     8000300e:	dead                	.insn	2, 0xdead
 
 0000000080003010 <tdat2>:
-    80003010:	cafe                	.insn	2, 0xcafe
-    80003012:	dead                	.insn	2, 0xdead
-    80003014:	cafe                	.insn	2, 0xcafe
-    80003016:	dead                	.insn	2, 0xdead
+    80003010:	afed                	.insn	2, 0xafed
+    80003012:	eadc                	.insn	2, 0xeadc
+    80003014:	afed                	.insn	2, 0xafed
+    80003016:	eadc                	.insn	2, 0xeadc
 
 0000000080003018 <tdat3>:
-    80003018:	cafe                	.insn	2, 0xcafe
-    8000301a:	dead                	.insn	2, 0xdead
-    8000301c:	cafe                	.insn	2, 0xcafe
-    8000301e:	dead                	.insn	2, 0xdead
+    80003018:	fede                	.insn	2, 0xfede
+    8000301a:	adca                	.insn	2, 0xadca
+    8000301c:	fede                	.insn	2, 0xfede
+    8000301e:	adca                	.insn	2, 0xadca
 
 0000000080003020 <tdat4>:
-    80003020:	cafe                	.insn	2, 0xcafe
-    80003022:	dead                	.insn	2, 0xdead
-    80003024:	cafe                	.insn	2, 0xcafe
-    80003026:	dead                	.insn	2, 0xdead
-    80003028:	0000                	.insn	2, 0x
+    80003020:	edea                	.insn	2, 0xedea
+    80003022:	edeadcaf          	.insn	4, 0xedeadcaf
+    80003026:	0000dcaf          	.insn	4, 0xdcaf
     8000302a:	0000                	.insn	2, 0x
     8000302c:	0000                	.insn	2, 0x
     8000302e:	0000                	.insn	2, 0x

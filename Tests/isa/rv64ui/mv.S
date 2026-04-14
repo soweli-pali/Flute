@@ -22,7 +22,7 @@ RVTEST_CODE_BEGIN
       ld x14, 8(x1); \
     )
 
-    TEST_CASE( 2, x13, 0xcafedeadcafedead, \
+    TEST_CASE( 2, x13, 0xdcafedeadcafedea, \
       la x1, ptr_to_tdat; \
       ld x1, 0(x1); \
       addi x2, x1, 0; \
@@ -44,8 +44,8 @@ ptr_to_tdat:
 
 tdat:
 tdat1:  .dword 0xdeadcafedeadcafe
-tdat2:  .dword 0xdeadcafedeadcafe
-tdat3:  .dword 0xdeadcafedeadcafe
-tdat4:  .dword 0xdeadcafedeadcafe
+tdat2:  .dword 0xeadcafedeadcafed
+tdat3:  .dword 0xadcafedeadcafede
+tdat4:  .dword 0xdcafedeadcafedea
 
 RVTEST_DATA_END
