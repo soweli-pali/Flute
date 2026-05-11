@@ -153,42 +153,91 @@ Disassembly of section .text:
     8000202c:	00c39393          	slli	t2,t2,0xc
     80002030:	fed38393          	addi	t2,t2,-19
     80002034:	00100193          	li	gp,1
-    80002038:	04771263          	bne	a4,t2,8000207c <fail>
+    80002038:	0e771c63          	bne	a4,t2,80002130 <fail>
 
 000000008000203c <test_2>:
     8000203c:	00001097          	auipc	ra,0x1
     80002040:	fc408093          	addi	ra,ra,-60 # 80003000 <begin_signature>
     80002044:	0000b083          	ld	ra,0(ra)
-    80002048:	00008113          	mv	sp,ra
-    8000204c:	00813683          	ld	a3,8(sp)
-    80002050:	feadd3b7          	lui	t2,0xfeadd
-    80002054:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
-    80002058:	00c39393          	slli	t2,t2,0xc
-    8000205c:	deb38393          	addi	t2,t2,-533
-    80002060:	00c39393          	slli	t2,t2,0xc
-    80002064:	dcb38393          	addi	t2,t2,-565
-    80002068:	00c39393          	slli	t2,t2,0xc
-    8000206c:	fed38393          	addi	t2,t2,-19
-    80002070:	00200193          	li	gp,2
-    80002074:	00769463          	bne	a3,t2,8000207c <fail>
-    80002078:	02301063          	bne	zero,gp,80002098 <pass>
+    80002048:	0080b683          	ld	a3,8(ra)
+    8000204c:	feadd3b7          	lui	t2,0xfeadd
+    80002050:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
+    80002054:	00c39393          	slli	t2,t2,0xc
+    80002058:	deb38393          	addi	t2,t2,-533
+    8000205c:	00c39393          	slli	t2,t2,0xc
+    80002060:	dcb38393          	addi	t2,t2,-565
+    80002064:	00c39393          	slli	t2,t2,0xc
+    80002068:	fed38393          	addi	t2,t2,-19
+    8000206c:	00200193          	li	gp,2
+    80002070:	0c769063          	bne	a3,t2,80002130 <fail>
 
-000000008000207c <fail>:
-    8000207c:	0ff0000f          	fence
-    80002080:	00018063          	beqz	gp,80002080 <fail+0x4>
-    80002084:	00119193          	slli	gp,gp,0x1
-    80002088:	0011e193          	ori	gp,gp,1
-    8000208c:	05d00893          	li	a7,93
-    80002090:	00018513          	mv	a0,gp
-    80002094:	00000073          	ecall
+0000000080002074 <test_3>:
+    80002074:	00001097          	auipc	ra,0x1
+    80002078:	f8c08093          	addi	ra,ra,-116 # 80003000 <begin_signature>
+    8000207c:	0000b083          	ld	ra,0(ra)
+    80002080:	00008113          	mv	sp,ra
+    80002084:	00010093          	mv	ra,sp
+    80002088:	00008113          	mv	sp,ra
+    8000208c:	00813683          	ld	a3,8(sp)
+    80002090:	feadd3b7          	lui	t2,0xfeadd
+    80002094:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
+    80002098:	00c39393          	slli	t2,t2,0xc
+    8000209c:	deb38393          	addi	t2,t2,-533
+    800020a0:	00c39393          	slli	t2,t2,0xc
+    800020a4:	dcb38393          	addi	t2,t2,-565
+    800020a8:	00c39393          	slli	t2,t2,0xc
+    800020ac:	fed38393          	addi	t2,t2,-19
+    800020b0:	00300193          	li	gp,3
+    800020b4:	06769e63          	bne	a3,t2,80002130 <fail>
 
-0000000080002098 <pass>:
-    80002098:	0ff0000f          	fence
-    8000209c:	00100193          	li	gp,1
-    800020a0:	05d00893          	li	a7,93
-    800020a4:	00000513          	li	a0,0
-    800020a8:	00000073          	ecall
-    800020ac:	c0001073          	unimp
+00000000800020b8 <test_4>:
+    800020b8:	00001097          	auipc	ra,0x1
+    800020bc:	f4808093          	addi	ra,ra,-184 # 80003000 <begin_signature>
+    800020c0:	0000b083          	ld	ra,0(ra)
+    800020c4:	00008113          	mv	sp,ra
+    800020c8:	00010093          	mv	ra,sp
+    800020cc:	00008113          	mv	sp,ra
+    800020d0:	00010093          	mv	ra,sp
+    800020d4:	00008113          	mv	sp,ra
+    800020d8:	00010093          	mv	ra,sp
+    800020dc:	00008113          	mv	sp,ra
+    800020e0:	00010093          	mv	ra,sp
+    800020e4:	00008113          	mv	sp,ra
+    800020e8:	00010093          	mv	ra,sp
+    800020ec:	00008113          	mv	sp,ra
+    800020f0:	00010093          	mv	ra,sp
+    800020f4:	00008113          	mv	sp,ra
+    800020f8:	00010093          	mv	ra,sp
+    800020fc:	00008113          	mv	sp,ra
+    80002100:	00813683          	ld	a3,8(sp)
+    80002104:	feadd3b7          	lui	t2,0xfeadd
+    80002108:	aff3839b          	addiw	t2,t2,-1281 # fffffffffeadcaff <_end+0xffffffff7ead9acf>
+    8000210c:	00c39393          	slli	t2,t2,0xc
+    80002110:	deb38393          	addi	t2,t2,-533
+    80002114:	00c39393          	slli	t2,t2,0xc
+    80002118:	dcb38393          	addi	t2,t2,-565
+    8000211c:	00c39393          	slli	t2,t2,0xc
+    80002120:	fed38393          	addi	t2,t2,-19
+    80002124:	00400193          	li	gp,4
+    80002128:	00769463          	bne	a3,t2,80002130 <fail>
+    8000212c:	02301063          	bne	zero,gp,8000214c <pass>
+
+0000000080002130 <fail>:
+    80002130:	0ff0000f          	fence
+    80002134:	00018063          	beqz	gp,80002134 <fail+0x4>
+    80002138:	00119193          	slli	gp,gp,0x1
+    8000213c:	0011e193          	ori	gp,gp,1
+    80002140:	05d00893          	li	a7,93
+    80002144:	00018513          	mv	a0,gp
+    80002148:	00000073          	ecall
+
+000000008000214c <pass>:
+    8000214c:	0ff0000f          	fence
+    80002150:	00100193          	li	gp,1
+    80002154:	05d00893          	li	a7,93
+    80002158:	00000513          	li	a0,0
+    8000215c:	00000073          	ecall
+    80002160:	c0001073          	unimp
 
 Disassembly of section .data:
 
